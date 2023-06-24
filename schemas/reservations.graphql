@@ -1,0 +1,204 @@
+type Query {
+    getReservations(startUTC: String!, endUTC: String!):  Mews
+  }
+type Value {
+  FloorNumber: String
+  LocationNotes: String
+}
+
+type Data {
+  Discriminator: String
+  Value: Value
+}
+
+type Room {
+  Id: String
+  EnterpriseId: String
+  IsActive: Boolean
+  ParentResourceId: String
+  Name: String
+  State: String
+  CreatedUtc: String
+  UpdatedUtc: String
+  Data: Data
+}
+
+type Customer {
+  Id: String
+  ChainId: String
+  Number: String
+  Title: String
+  Sex: String
+  Gender: String
+  FirstName: String
+  LastName: String
+  SecondLastName: String
+  NationalityCode: String
+  LanguageCode: String
+  BirthDate: String
+  BirthPlace: String
+  CitizenNumber: String
+  MotherName: String
+  FatherName: String
+  Occupation: String
+  Email: String
+  Phone: String
+  TaxIdentificationNumber: String
+  LoyaltyCode: String
+  AccountingCode: String
+  BillingCode: String
+  Notes: String
+  CarRegistrationNumber: String
+  CreatedUtc: String
+  UpdatedUtc: String
+  Passport: String
+  IdentityCard: String
+  Visa: String
+  DriversLicense: String
+  Address: String
+  AddressId: String
+  CategoryId: String
+  BirthDateUtc: String
+  ItalianDestinationCode: String
+  ItalianFiscalCode: String
+  CompanyId: String
+  MergeTargetId: String
+  ActivityState: String
+  Options: [String]
+  Classifications: [String]
+}
+
+type Options {
+  OwnerCheckedIn: Boolean
+  AllCompanionsCheckedIn: Boolean
+  AnyCompanionCheckedIn: Boolean
+}
+
+type PersonCounts {
+  AgeCategoryId: String
+  Count: Int
+}
+
+type Reservations {
+  Id: String
+  ServiceId: String
+  GroupId: String
+  Number: String
+  ChannelNumber: String
+  ChannelManagerNumber: String
+  ChannelManagerGroupNumber: String
+  ChannelManager: String
+  State: String
+  Origin: String
+  OriginDetails: String
+  Purpose: String
+  CreatedUtc: String
+  UpdatedUtc: String
+  CancelledUtc: String
+  StartUtc: String
+  EndUtc: String
+  ReleasedUtc: String
+  RequestedCategoryId: String
+  AssignedSpaceId: String
+  AssignedResourceId: String
+  AssignedSpaceLocked: Boolean
+  AssignedResourceLocked: Boolean
+  BusinessSegmentId: String
+  CompanyId: String
+  TravelAgencyId: String
+  AvailabilityBlockId: String
+  RateId: String
+  VoucherId: String
+  CreditCardId: String
+  CancellationReason: String
+  AdultCount: Int
+  ChildCount: Int
+  OwnerId: String
+  CustomerId: String
+  BookerId: String
+  ChannelManagerId: String
+  Room: Room
+  Customer: Customer
+  Options: Options
+  CompanionIds: [String]
+  PersonCounts: [PersonCounts]
+}
+
+type Customers {
+  Id: String
+  ChainId: String
+  Number: String
+  Title: String
+  Sex: String
+  Gender: String
+  FirstName: String
+  LastName: String
+  SecondLastName: String
+  NationalityCode: String
+  LanguageCode: String
+  BirthDate: String
+  BirthPlace: String
+  CitizenNumber: String
+  MotherName: String
+  FatherName: String
+  Occupation: String
+  Email: String
+  Phone: String
+  TaxIdentificationNumber: String
+  LoyaltyCode: String
+  AccountingCode: String
+  BillingCode: String
+  Notes: String
+  CarRegistrationNumber: String
+  CreatedUtc: String
+  UpdatedUtc: String
+  Passport: String
+  IdentityCard: String
+  Visa: String
+  DriversLicense: String
+  Address: String
+  AddressId: String
+  CategoryId: String
+  BirthDateUtc: String
+  ItalianDestinationCode: String
+  ItalianFiscalCode: String
+  CompanyId: String
+  MergeTargetId: String
+  ActivityState: String
+  Options: [String]
+  Classifications: [String]
+}
+
+type Resources {
+  Id: String
+  EnterpriseId: String
+  IsActive: Boolean
+  ParentResourceId: String
+  Name: String
+  State: String
+  CreatedUtc: String
+  UpdatedUtc: String
+  Data: Data
+}
+  type Mews {
+    Services: String
+    Products: String
+    ResourceCategories: String
+    ResourceCategoryAssignments: String
+    BusinessSegments: String
+    Rates: String
+    RateGroups: String
+    Items: String
+    OrderItems: String
+    Notes: String
+    QrCodeData: String
+    Companies: String
+    ResourceAccessTokens: String
+    AgeCategories: String
+    ChannelManagerReservations: String
+    Cursor: String
+    ReservationGroups: String
+    Reservations: [Reservations]
+    Customers: [Customers]
+    Resources: [Resources]
+  }
