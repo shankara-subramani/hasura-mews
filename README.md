@@ -11,10 +11,10 @@
 [![Remix on Glitch](https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button-v2.svg)](https://glitch.com/edit/#!/remix/hasura-mews)
 * MEWS has a demo environment which you can use to test the integration. Get the environment's credentials [here](https://mews-systems.gitbook.io/connector-api/getting-started#quick-start)
 * Now head over to `.env` file in Glitch and add these
- * `MEWS_BASE_URL`
- * `MEWS_CLIENT_TOKEN`
- * `MEWS_ACCESS_TOKEN`
- * `MEWS_CLIENT`
+   * `MEWS_BASE_URL`
+   * `MEWS_CLIENT_TOKEN`
+   * `MEWS_ACCESS_TOKEN`
+   * `MEWS_CLIENT`
 * Click on **Share** at the top of the Glitch UI and copy the 'Live Site' URL.
 
 ## Step 3: Add Remote Schema
