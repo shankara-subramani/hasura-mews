@@ -1,0 +1,25 @@
+{
+  "name": "hasura-remote-schema",
+  "version": "1.0.0",
+  "description": "Integrate MEWS API with Hasura using Remote Schema",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": "16.x"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "graphql": "^16.7.1",
+    "graphql-tag": "^2.12.6",
+    "node-fetch": "^2.6.11",
+    "@apollo/server": "^4.7.3",
+    "@graphql-tools/schema": "^10.0.0",
+    "axios": "^1.4.0",
+    "@graphql-tools/load": "^8.0.0",
+    "@graphql-tools/graphql-file-loader": "^8.0.0"
+  }
+}
